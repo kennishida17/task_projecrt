@@ -11,3 +11,11 @@
 - タスクの優先度付機能
 - タスクの通知機能
 - ログイン機能
+# サーバー起動
+`python manage.py runserver`
+# Git
+`git init`
+`git branch -M main`
+`git add .`,`git add file_name`
+`git commit -m "Comment"`
+`git push origin main`
