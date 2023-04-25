@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 
 # Create your views here.
 from django.http import HttpResponse
@@ -34,3 +34,7 @@ def task_list(request):
     return render(request,'task_list.html',context)
 
 
+def delete_task(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    task.delete()
+    return redirect('task_list')

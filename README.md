@@ -5,7 +5,7 @@
 - 個人開発をやり切る力を得る
 - PythonのフレームワークであるDjangoの勉強
 ## 仕様
-- タスクの追加
+- [x] タスクの追加
 - タスクの削除
 - タスクの編集
 - タスクの優先度付機能
@@ -19,4 +19,4 @@
 - BRANCHNAME = イシュー番号_内容
 - `git add .`,`git add file_name`
 - `git commit -m "Comment"`
-- `git push origin main`
+- `git push origin BRANCHNAME`
