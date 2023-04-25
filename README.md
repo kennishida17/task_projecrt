@@ -13,7 +13,7 @@
 - ログイン機能
 # サーバー起動
 `python manage.py runserver`
-# Git
+# Gitのpushまでの操作
 - `git init`
 - `git branch -M main`
 - `git add .`,`git add file_name`
