@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <form method="POST" action="{% url 'task_list' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Task</button>
+  </form>
+  <ul>
+    {% for task in tasks %}
+      <li>{{ task.title }} - {{ task.description }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

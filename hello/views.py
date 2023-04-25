@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from django.http import HttpResponse
 from .forms import MyForm
+from .models import Task
+from .forms import TaskForm
 
 def hello(request):
     return HttpResponse('Hello World')
@@ -19,4 +21,16 @@ def inputformfunction(request):
         # field2 = form.cleaned_data['field2']
     
     return render(request,'my_template.html',{'form':form})
-    
+
+def task_list(request):
+    tasks = Task.objects.all()
+    form = TaskForm()
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('task_list')
+    context = {'tasks':tasks, 'form':form}
+    return render(request,'task_list.html',context)
+
+
