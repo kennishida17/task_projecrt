@@ -15,7 +15,8 @@
 `python manage.py runserver`
 # Gitのpushまでの操作
 - `git init`
-- `git branch -M main`
+- `git branch -M BRANCHNAME`
+- BRANCHNAME = イシュー番号_内容
 - `git add .`,`git add file_name`
 - `git commit -m "Comment"`
 - `git push origin main`
