@@ -7,4 +7,5 @@ urlpatterns = [
     path('list',views.list),
     path('inputform',views.inputformfunction),
     path('', views.task_list, name='task_list'),
+    path('delete_task/<int:task_id>/', views.delete_task, name='delete_task'),
 ]

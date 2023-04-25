@@ -1,3 +1,5 @@
+<!-- task_list.html -->
+
 {% extends 'index.html' %}
 
 {% block content %}
@@ -6,9 +8,18 @@
     {{ form.as_p }}
     <button type="submit">Add Task</button>
   </form>
+  <h2>Task List</h2>
   <ul>
     {% for task in tasks %}
-      <li>{{ task.title }} - {{ task.description }}</li>
+      <li>
+        {{ task.title }} - {{ task.description }}
+        <form method="POST" action="{% url 'delete_task' task.id %}">
+          {% csrf_token %}
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    {% empty %}
+      <p>No tasks yet.</p>
     {% endfor %}
   </ul>
 {% endblock %}
