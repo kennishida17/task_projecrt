@@ -14,8 +14,8 @@
 # サーバー起動
 `python manage.py runserver`
 # Git
-`git init`
-`git branch -M main`
-`git add .`,`git add file_name`
-`git commit -m "Comment"`
-`git push origin main`
+- `git init`
+- `git branch -M main`
+- `git add .`,`git add file_name`
+- `git commit -m "Comment"`
+- `git push origin main`
